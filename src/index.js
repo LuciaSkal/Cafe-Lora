@@ -62,9 +62,11 @@ const drinks = [
 
 const drinkListElm = document.querySelector('.drinks-list')
 
-drinks.forEach((item) => {
-  drinkListElm.appendChild(Drink(item))
+fetch('https://apps.kodim.cz/daweb/cafelora/api/drinks')
+.then((response) => response.json())
+.then((data) => {
+  data.forEach((items) => {
+    drinkListElm.appendChild(Drink(items))
+  })
 })
-
-
 
