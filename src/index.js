@@ -1,4 +1,6 @@
+
 import './style.css';
+import {Layer} from './Layer'
 
 console.log('funguju!');
 
@@ -33,3 +35,37 @@ orderBtnElm.addEventListener('click', () => {
   }
 })
 
+const layerElm = document.querySelector('.drink__info')
+
+const items = [
+  {
+    color: '#feeeca',
+    label: 'mléčná pěna',
+  },
+  {
+    color: '#fed7b0"',
+    label: 'teplé mléko',
+  },
+  {
+    color: '#613916"',
+    label: 'espresso',
+  }
+]
+
+
+for (let i=0; i < items.length; i++ ) {
+  layerElm.innerHTML += Layer(items[i])
+}
+
+
+
+
+
+/*-------------------------------------*/
+     /*<div class="layer">
+                  <div
+                    class="layer__color"
+                    style="background-color: #feeeca"
+                  ></div>
+                  <div class="layer__label">mléčná pěna</div>
+                </div>*/
