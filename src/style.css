@@ -244,6 +244,18 @@ nav a:hover {
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.popis {
+ width: 80rem;
+ margin: auto;
+ height: 10rem;
+ font-size: 30px;
+ color:whitesmoke;
+ text-align: center;
 }
 
 .contacts {
